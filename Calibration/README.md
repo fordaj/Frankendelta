@@ -8,6 +8,7 @@ Run [levelBed.gcode](levelBed.gcode) to heat, level the bed, and save to EEPROM.
 4. To measure belt tension, "pluck" the belt at its midpoint on the non-carriage side. Not so hard that it smacks the rail, but hard enough for the frequency meter to record from 1-3cm away
 5. Adjust belt tension until belts match desired frequency f = 3600/L. In my case, f = 3600/98cm = 36.7Hz
 
-## Tower Calibration
+## Delta Calibration
+Lots of data gathered here can be added to the [firmware](https://github.com/fordaj/Frankendelta)
 1. Preheat to printing temperatures (ex. [heatPLA.gcode](heatPLA.gcode))
 2. Run [calibrateDelta.gcode](calibrateDelta.gcode). This runs G33 (tower calibration), M500 (saves settings), G29 (auto-bed level), M500.
