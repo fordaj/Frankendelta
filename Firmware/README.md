@@ -76,7 +76,7 @@ Printable height (obtained from [calibration file](calibrateDelta.gcode))
 ```cpp
 #define DELTA_HEIGHT 535.00
 ```
-Endstop adjustment (obtained from [calibration file](calibrateDelta.gcode))
+Endstop adjustment (obtained from [calibration file](../Calibration/calibrateDelta.gcode))
 ```cpp
 #define DELTA_ENDSTOP_ADJ { 0.00, 0.00, 0.00 }
 ```
