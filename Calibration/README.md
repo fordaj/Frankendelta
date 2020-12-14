@@ -17,6 +17,7 @@ With the hardware properly tightened/bolted in/connected/configured, we can move
 3. Using babystepping/0.0025mm adjustment, move Z until the probe sees the bed. Make a note of the Z position when the probe first notices the bed (Z_probe)
 4. Take a thin piece of paper and place it under the nozzle. Babystep Z down until it makes contact with the paper, and the paper becomes slightly difficult to move
 5. Z_offset = - abs(Z_probe - Z_current)
+6. Run a print and make any adjustments needed until the first layer looks good
 
 ## Delta Calibration
 Lots of data gathered here can be added to the [firmware](https://github.com/fordaj/Frankendelta)
