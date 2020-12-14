@@ -20,8 +20,9 @@ With the hardware properly tightened/bolted in/connected/configured, we can move
 
 ## Delta Calibration
 Lots of data gathered here can be added to the [firmware](https://github.com/fordaj/Frankendelta)
-1. Preheat to printing temperatures (ex. [heatPLA.gcode](heatPLA.gcode))
-2. Run [calibrateDelta.gcode](calibrateDelta.gcode). This runs G33 (tower calibration), M500 (saves settings), G29 (auto-bed level), M500.
+1. Clean the bed of any dirt/dust/plastic etc.
+2. Preheat to printing temperatures (ex. [heatPLA.gcode](heatPLA.gcode))
+3. Run [calibrateDelta.gcode](calibrateDelta.gcode). This runs G33 (tower calibration), M500 (saves settings), G29 (auto-bed level), M500.
 
 ## Bed Leveling
 Run [levelBed.gcode](levelBed.gcode) to heat, level the bed, and save to EEPROM. This edits the saved mesh that is loaded with each G28 (home)
