@@ -60,7 +60,7 @@ Allow user to define safe zone
 ```cpp
 #define DELTA_CALIBRATION_MENU
 ```
-Allow G33 Auto-Calibration
+Allow G33 Auto-Calibration (used in [calibration file](https://github.com/fordaj/Frankendelta/blob/main/Calibration/calibrateDelta.gcode))
 ```cpp
 #define DELTA_AUTO_CALIBRATION
 ```
@@ -88,3 +88,97 @@ Delta radius/diagonal rod adjustments
 ```cpp
 #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0, 0.0, 0.0 }
 ```
+
+### Endstop Settings
+Disable endstop pullups
+```cpp
+//#define ENDSTOPPULLUPS
+```
+Ensure endstops are non-inverting
+```cpp
+#define X_MIN_ENDSTOP_INVERTING false
+#define Y_MIN_ENDSTOP_INVERTING false
+#define Z_MIN_ENDSTOP_INVERTING false
+#define X_MAX_ENDSTOP_INVERTING false
+#define Y_MAX_ENDSTOP_INVERTING false
+#define Z_MAX_ENDSTOP_INVERTING false
+#define Z_MIN_PROBE_ENDSTOP_INVERTING false
+```
+Enable stepper drivers
+```cpp
+#define X_DRIVER_TYPE  TMC2130
+#define Y_DRIVER_TYPE  TMC2130
+#define Z_DRIVER_TYPE  TMC2130
+
+#define E0_DRIVER_TYPE TMC2130
+```
+
+### Movement Settings
+Adjust "Axis Steps Per Unit" variables
+```cpp
+#define XYZ_FULL_STEPS_PER_ROTATION 400
+
+#define XYZ_PULLEY_TEETH 16
+
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 158 } 
+```
+Increase max hotend feedrate
+```cpp
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 500, 150 }
+```
+Lower default acceleration
+```cpp
+#define DEFAULT_ACCELERATION          2000
+```
+Change default hotend jerk
+```cpp
+#define DEFAULT_ACCELERATION          2000
+```
+
+### Z-Probe Options
+Since we are using a laser probe, no mechanical deployment is needed
+```cpp
+#define FIX_MOUNTED_PROBE
+```
+Adjust nozzle-to-probe offset
+```cpp
+#define NOZZLE_TO_PROBE_OFFSET { 0, -19, -2.55 }
+```
+Define gap between probe locations and bed edge
+```cpp
+#define PROBING_MARGIN 40
+```
+Set probe XY movement speed to 100mm/s
+```cpp
+#define XY_PROBE_SPEED (100*60)
+```
+Enable multi-probing for improved accuracy
+```cpp
+#define MULTIPLE_PROBING 2
+```
+Adjust z-clearances
+```cpp
+#define Z_CLEARANCE_DEPLOY_PROBE   20
+#define Z_CLEARANCE_BETWEEN_PROBES  8
+#define Z_CLEARANCE_MULTI_PROBE     5
+```
+Enable minimum software endstops
+```cpp
+#define MIN_SOFTWARE_ENDSTOPS
+```
+
+### Bed Leveling
+Enable 3-point bed leveling since I have a glass bed
+```cpp
+#define AUTO_BED_LEVELING_3POINT
+```
+If there is bed level data stored, load it after every [bed leveling](https://github.com/fordaj/Frankendelta/blob/main/Calibration/levelBed.gcode)
+```cpp
+#define RESTORE_LEVELING_AFTER_G28
+```
+Set homing speed to 60mm/s
+```cpp
+#define HOMING_FEEDRATE_Z  (60*60)
+```
+
+### Additional Features
