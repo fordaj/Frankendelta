@@ -38,7 +38,7 @@ Bed thermistor selection
 ```
 
 ### PID Settings
-Auto-tune menu on LCD.
+Auto-tune menu on LCD
 ```cpp
 #define PID_AUTOTUNE_MENU
 ```
@@ -82,15 +82,19 @@ Diagonal push-rod length
 ```
 Printable height (obtained from [calibration file](https://github.com/fordaj/Frankendelta/blob/main/Calibration/calibrateDelta.gcode))
 ```cpp
-#define DELTA_HEIGHT 535.00
+#define DELTA_HEIGHT 535.26
 ```
 Endstop adjustment (obtained from [calibration file](https://github.com/fordaj/Frankendelta/blob/main/Calibration/calibrateDelta.gcode))
 ```cpp
-#define DELTA_ENDSTOP_ADJ { 0.00, 0.00, 0.00 }
+#define DELTA_ENDSTOP_ADJ { 0.0, -0.26, -2.10 }
 ```
 Diagonal push-rod horizontal coverage with centered effector(obtained from [calibration file](https://github.com/fordaj/Frankendelta/blob/main/Calibration/calibrateDelta.gcode))
 ```cpp
-#define DELTA_RADIUS 190.4
+#define DELTA_RADIUS 186.95
+```
+Tower angle trim
+```cpp
+#define DELTA_TOWER_ANGLE_TRIM { 0.24, -0.10, -0.14 }
 ```
 Delta radius/diagonal rod adjustments
 ```cpp
@@ -150,7 +154,7 @@ Since we are using a laser probe, no mechanical deployment is needed
 ```
 Adjust nozzle-to-probe offset
 ```cpp
-#define NOZZLE_TO_PROBE_OFFSET { 0, -19, -2.55 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -19, -2.40 }
 ```
 Define gap between probe locations and bed edge
 ```cpp
@@ -186,7 +190,7 @@ If there is bed level data stored, load it after every [bed leveling](https://gi
 ```
 Set homing speed to 50mm/s
 ```cpp
-#define HOMING_FEEDRATE_Z  (50*60)
+#define HOMING_FEEDRATE_Z  (60*60)
 ```
 
 ### Additional Features
