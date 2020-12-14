@@ -2,7 +2,8 @@
 1. Choose a frequency meter; I used my iPhone with the <a href="https://apps.apple.com/us/app/easy-tension/id1093873727">Easy Tension</a> application.
 2. With the printer off, move the belt carriages halfway down their rails
 3. Measure the distance L (cm) from the stepper motor to the pulley
-4. Adjust belt tension until it matches the desired frequency f = 3600/L. In my case, f = 3600/98cm = 36.7Hz
+4. To measure belt tension, "pluck" the belt at its midpoint on the non-carriage side. Not so hard that it smacks the rail, but hard enough for the frequency meter to record from 1-3cm away
+5. Adjust belt tension until belts match desired frequency f = 3600/L. In my case, f = 3600/98cm = 36.7Hz
 
 ## Tower Calibration
 1. Preheat to printing temperatures (ex. [heatPLA.gcode](heatPLA.gcode))
