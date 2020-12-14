@@ -184,9 +184,9 @@ If there is bed level data stored, load it after every [bed leveling](https://gi
 ```cpp
 #define RESTORE_LEVELING_AFTER_G28
 ```
-Set homing speed to 60mm/s
+Set homing speed to 50mm/s
 ```cpp
-#define HOMING_FEEDRATE_Z  (60*60)
+#define HOMING_FEEDRATE_Z  (50*60)
 ```
 
 ### Additional Features
