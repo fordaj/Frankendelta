@@ -5,5 +5,5 @@
 4. Adjust belt tension until it matches the desired frequency f = 3600/L. In my case, f = 3600/98cm = 36.7Hz
 
 ## Tower Calibration
-1. Preheat to printing temperatures (ex.[a relative link](heatPLA.gcode))
-2. Run [a relative link](towerCalibration.gcode). This runs G33 (tower calibration), M500 (saves settings), G29 (auto-bed level), M500.
+1. Preheat to printing temperatures (ex.[heatPLA.gcode](heatPLA.gcode))
+2. Run the [tower calibration script](towerCalibration.gcode). This runs G33 (tower calibration), M500 (saves settings), G29 (auto-bed level), M500.
