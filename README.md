@@ -1,7 +1,10 @@
 # Frankendelta
-My dad and I built our own massive Kossel-inspired Delta 3D printers in 2019. This repository contains all information and files I use to maintain and upgrade Frankendelta, who has been through a lot :-)
+Meet the 45lb, assembled-disassembled-assembled-etc., absolute unit of a Delta 3D Printer, Frankendelta.
+~Picture goes here~
+Over the summer of 2019, my dad and I worked together to design a 3D printer with a build volume large enough to print my head (that wasn't the main goal... but it's on the list). In all fairness, my dad brought in most of the expertise from building his Kossel Mini Delta 3D printer, scaling up the things he felt worked well from that. I had experience with cartesian printers, but deltas are a different beast. This repository serves as a medium for functionality and documentation, where I can refer back to the processes and files used to get Frankendelta humming and happy as needed.
 
 ## Parts List
+Here are most of the parts included in this build. Some not included are the aluminum sheets my dad milled on his CNC, T-nuts, control board standoffs, fans, and supplies (wires, JTX connectors, solder, cables, fuses, etc.). All in all, ended up costing ~$800.
 | Quantity | Type | Item | Price |
 |--|--|--|--|
 | 1 | Control Board | [BIGTREETECH SKR V1.3 32-bit Smoothie Board with SPI TMC2130 Stepper Drivers](https://www.biqu.equipment/products/pre-sale-bigtreetech-skr-v1-3-smoothieboard-32-bit-open-source-arm-cpu-motherboard-support-uart-model-2004lcd-3d-printer-parts?variant=29477907005538) | $44.95 |
@@ -24,5 +27,3 @@ My dad and I built our own massive Kossel-inspired Delta 3D printers in 2019. Th
 | 3 | Linear Rails | [V-Slot 20mm x 40mm x 1000mm Linear Rail, Black](https://openbuildspartstore.com/v-slot-20x40-linear-rail/) | $45.87 |
 | 3 | Linear Rails | [V-Slot 20mm x 40mm x 500mm Linear Rail, Black](https://openbuildspartstore.com/v-slot-20x40-linear-rail/) | $23.97 |
 | 3 | Linear Rails | [V-Slot 20mm x 40mm x 500mm Linear Rail, Black](https://openbuildspartstore.com/v-slot-20x20-linear-rail/) | $17.97 |
-
-https://openbuildspartstore.com/v-slot-20x20-linear-rail/
