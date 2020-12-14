@@ -7,4 +7,4 @@
 
 ## Tower Calibration
 1. Preheat to printing temperatures (ex. [heatPLA.gcode](heatPLA.gcode))
-2. Run [towerCalibration.gcode](towerCalibration.gcode). This runs G33 (tower calibration), M500 (saves settings), G29 (auto-bed level), M500.
+2. Run [calibrateDelta.gcode](calibrateDelta.gcode). This runs G33 (tower calibration), M500 (saves settings), G29 (auto-bed level), M500.
