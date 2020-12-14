@@ -1,5 +1,5 @@
 # Marlin Firmware
-[Marlin firmware](https://marlinfw.org) version 2.0.7.2, last flashed 12-13-2020.
+[Marlin firmware](https://marlinfw.org) version 2.0.7.2, last flashed 12-13-2020. 
 
 ## Configuration.h
 All of the changes I've made to the [Configuration.h](Marlin/Configuration.h) file. Since I am using a delta printer, I started with the generic example in [Marlin's configuration repository](https://github.com/MarlinFirmware/Configurations). Sections correspond with order of appearance in files. Actual code shown for simpler CTRL+f navigation.
