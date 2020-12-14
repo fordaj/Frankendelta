@@ -1,5 +1,5 @@
 # Marlin Firmware
-[Marlin firmware](https://marlinfw.org) version 2.0.7.2, last flashed 12-13-2020. 
+[Marlin firmware](https://marlinfw.org) version 2.0.7.2, last flashed 12-13-2020.
 
 ## Configuration.h
 All of the changes I've made to the [Configuration.h](Marlin/Configuration.h) file. Since I am using a delta printer, I started with the generic example in [Marlin's configuration repository](https://github.com/MarlinFirmware/Configurations). Sections correspond with order of appearance in files. Actual code shown for simpler CTRL+f navigation.
@@ -14,9 +14,17 @@ Default to serial port 0, otherwise emulate
 #define SERIAL_PORT 0
 #define SERIAL_PORT_2 -1
 ```
+Define motherboard (using BigTreeTech SKR V1.3)
+```cpp
+#define MOTHERBOARD BOARD_BTT_SKR_V1_3
+```
 Set printer name
 ```cpp
 #define CUSTOM_MACHINE_NAME "Frankendelta"
+```
+Disable power supply unit control
+```cpp
+//#define PSU_CONTROL
 ```
 
 ### Thermistors
@@ -245,13 +253,15 @@ Add frames for fan animation, show heating progress bars
 #define STATUS_FAN_FRAMES 3
 #define STATUS_HEAT_PERCENT 
 ```
-Enable babystepping. Make it always available, accessible with a double-click of the knob. Operate in mm instead of microsteps. Combine babystepping and "M851 Z", the probe offset command
+Enable babystepping. Make it always available, accessible with a double-click of the knob. Operate in mm instead of microsteps. Move 0.001 per knob click. Combine babystepping and "M851 Z", the probe offset command
 ```cpp
 #define BABYSTEPPING
 
 #define BABYSTEP_ALWAYS_AVAILABLE
 
 #define BABYSTEP_MILLIMETER_UNITS
+#define BABYSTEP_MULTIPLICATOR_Z  0.001
+#define BABYSTEP_MULTIPLICATOR_XY 0.001 
 
 #define DOUBLECLICK_FOR_Z_BABYSTEPPING
 
