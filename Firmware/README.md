@@ -72,15 +72,15 @@ Diagonal push-rod length
 ```cpp
 #define DELTA_DIAGONAL_ROD 360.24 
 ```
-Printable height (obtained from [../Calibration/calibrateDelta.gcode](calibration file))
+Printable height (obtained from [calibration file](calibrateDelta.gcode))
 ```cpp
 #define DELTA_HEIGHT 535.00
 ```
-Endstop adjustment (obtained from [calibrateDelta.gcode](calibration file))
+Endstop adjustment (obtained from [calibration file](calibrateDelta.gcode))
 ```cpp
 #define DELTA_ENDSTOP_ADJ { 0.00, 0.00, 0.00 }
 ```
-Diagonal push-rod horizontal coverage with centered effector(obtained from [calibrateDelta.gcode](calibration file))
+Diagonal push-rod horizontal coverage with centered effector(obtained from [calibration file](calibrateDelta.gcode))
 ```cpp
 #define DELTA_RADIUS 190.4
 ```
