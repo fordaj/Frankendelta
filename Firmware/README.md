@@ -222,3 +222,69 @@ Drive fan with software PWM, which is less annoying than hardware
 ```cpp
 #define FAN_SOFT_PWM
 ```
+
+## Configuration_adv.h
+All of the changes I've made to the [Configuration_adv.h](Marlin/Configuration_adv.h) file. 
+
+### Thermal Settings
+Set minimum fan PWM
+```cpp
+#define FAN_MIN_PWM 35
+```
+### Additional Features
+Sort files alphabetically
+```cpp
+#define SDCARD_SORT_ALPHA
+```
+Scroll long filenames
+```cpp
+#define SCROLL_LONG_FILENAMES
+```
+Add frames for fan animation, show heating progress bars
+```cpp
+#define STATUS_FAN_FRAMES 3
+#define STATUS_HEAT_PERCENT 
+```
+Enable babystepping. Make it always available, accessible with a double-click of the knob. Operate in mm instead of microsteps. Combine babystepping and "M851 Z", the probe offset command
+```cpp
+#define BABYSTEPPING
+
+#define BABYSTEP_ALWAYS_AVAILABLE
+
+#define BABYSTEP_MILLIMETER_UNITS
+
+#define DOUBLECLICK_FOR_Z_BABYSTEPPING
+
+#define BABYSTEP_ZPROBE_OFFSET
+```
+Configure linear advance
+```cpp
+#define LIN_ADVANCE
+
+#define LIN_ADVANCE_K 0.3
+```
+Disable arc support to save memory
+```cpp
+//#define ARC_SUPPORT
+```
+
+### Buffers
+Enable firmware/LCD controlled retraction
+```cpp
+#define FWRETRACT
+```
+Trinamic Configuration
+```cpp
+#define HOLD_MULTIPLIER    0.4
+
+#define X_CURRENT       700
+#define Y_CURRENT       700
+#define Z_CURRENT       700
+#define E0_CURRENT      1050
+
+#define TMC_USE_SW_SPI
+
+//#define STEALTHCHOP_E
+
+#define MONITOR_DRIVER_STATUS
+```
