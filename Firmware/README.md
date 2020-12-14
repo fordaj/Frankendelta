@@ -120,19 +120,19 @@ Adjust "Axis Steps Per Unit" variables
 
 #define XYZ_PULLEY_TEETH 16
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 158 } 
+#define DEFAULT_AXIS_STEPS_PER_UNIT { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 158 } 
 ```
 Increase max hotend feedrate
 ```cpp
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 500, 150 }
+#define DEFAULT_MAX_FEEDRATE { 500, 500, 500, 150 }
 ```
 Lower default acceleration
 ```cpp
-#define DEFAULT_ACCELERATION          2000
+#define DEFAULT_ACCELERATION 2000
 ```
 Change default hotend jerk
 ```cpp
-#define DEFAULT_ACCELERATION          2000
+#define DEFAULT_ACCELERATION 2000
 ```
 
 ### Z-Probe Options
@@ -182,3 +182,43 @@ Set homing speed to 60mm/s
 ```
 
 ### Additional Features
+Enable EEPROM
+```cpp
+#define EEPROM_SETTINGS
+```
+Setup heating profiles
+```cpp
+#define PREHEAT_1_LABEL       "PLA"
+#define PREHEAT_1_TEMP_HOTEND  220
+#define PREHEAT_1_TEMP_BED      80
+#define PREHEAT_1_FAN_SPEED      0
+
+#define PREHEAT_2_LABEL       "ABS"
+#define PREHEAT_2_TEMP_HOTEND  240
+#define PREHEAT_2_TEMP_BED      90
+#define PREHEAT_2_FAN_SPEED      0
+```
+Track total/successful/failed/time remaining
+```cpp
+#define PRINTCOUNTER
+```
+Enable SD card support
+```cpp
+#define SDSUPPORT
+```
+I lost the menu knob orientation coin flip :-)
+```cpp
+#define REVERSE_ENCODER_DIRECTION
+```
+
+### LCD Settings
+Choose model
+```cpp
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+```
+
+### Extra Features
+Drive fan with software PWM, which is less annoying than hardware
+```cpp
+#define FAN_SOFT_PWM
+```

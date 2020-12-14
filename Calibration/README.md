@@ -1,5 +1,5 @@
 ## Bed Leveling
-Run [levelBed.gcode](levelBed.gcode) to level the bed and save to EEPROM. This edits the saved mesh that is loaded with each G28 (home)
+Run [levelBed.gcode](levelBed.gcode) to heat, level the bed, and save to EEPROM. This edits the saved mesh that is loaded with each G28 (home)
 
 ## Belt Tensioning
 1. Choose a frequency meter; I used my iPhone with the <a href="https://apps.apple.com/us/app/easy-tension/id1093873727">Easy Tension</a> application.
