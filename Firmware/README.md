@@ -72,7 +72,7 @@ Diagonal push-rod length
 ```cpp
 #define DELTA_DIAGONAL_ROD 360.24 
 ```
-Printable height (obtained from [calibrateDelta.gcode](calibration file))
+Printable height (obtained from [../Calibration/calibrateDelta.gcode](calibration file))
 ```cpp
 #define DELTA_HEIGHT 535.00
 ```
