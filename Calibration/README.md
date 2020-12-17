@@ -17,7 +17,7 @@ With the hardware properly tightened/bolted in/connected/configured, we can move
 3. Using babystepping/0.0025mm adjustment, move Z until the probe sees the bed. Make a note of the Z position when the probe first notices the bed (Z_probe)
 4. Take a thin piece of paper and place it under the nozzle. Babystep Z down until it makes contact with the paper, and the paper becomes slightly difficult to move
 5. Z_offset = - abs(Z_probe - Z_current)
-6. Run a print and make any adjustments needed until the first layer looks good
+6. Homing and then G0 Z0 should place the nozzle on a post-it with exactly the pressure you calibrated it to
 
 ## Delta Calibration
 Lots of data gathered here can be added to the [firmware](https://github.com/fordaj/Frankendelta)
@@ -57,7 +57,39 @@ M501                        ; Load settings
 ```
 
 ## Bed Leveling
-Run [levelBed.gcode](levelBed.gcode) to heat, level the bed, and save to EEPROM. This edits the saved mesh that is loaded with each G28 (home)
+To calibrate the saved mesh in UBL, run [UBL.gcode](UBL.gcode)
+```gcode
+M502            ; Load firmware settings
+M500            ; Store settings in EEPROM
+M501            ; Load settings from EEPROM
+M190 S80        ; Heat bed to 80
+M104 S220       ; Heat nozzle to 220
+G28             ; Home
+G29 P1          ; Probe the bed
+G29 P3 T        ; Repeat until all mesh points are filled in
+G29 S1          ; Save UBL mesh points to EEPROM
+G29 F 10.0      ; Set Fade Height for correction at 10.0 mm
+G29 A           ; Activate the UBL
+M500            ; Store settings in EEPROM
+```
+Code modified from Marlin's [documentation](https://marlinfw.org/docs/features/unified_bed_leveling.html). Before every print, the mesh can be verified and tilted with a 3-point bed level:
+```gcode
+G29 L1
+G29 J
+```
 
-## First Layer
-Print [firstLayer.gcode](firstLayer.gcode) and see how it turns out. If some spots look too thick or thin, refer to the Bed Leveling section.
+## E-steps
+1. Heat the nozzle to the temperature you'll be printing with
+2. Put the printer in relative position, and print out the old e-step value
+```gcode
+G91 ; Relative positioning
+M92 ; The "E" parameter is the old e-step value
+```
+3. Mark the filament with a marker as close to the extruder as possible
+4. Make another mark on the incoming filament 120mm away from the first mark
+5. Turn the extruder knob to push filament through the hotend until your first mark lines up with the beginning of the extruder
+6. Run 100mm of filament through the hotend
+7. NewE_Steps = Old_ESteps * 100 / (120 - length_remaining) (Teaching Teach offers an [e-step calculator](https://teachingtechyt.github.io/calibration.html#esteps))
+8. Set the new e-steps with M92 E188.17
+8. Repeat steps 3-7 until the length_remaining is 20mm
+
