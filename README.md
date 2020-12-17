@@ -1,7 +1,7 @@
 # Frankendelta
-Meet the 45lb, assembled-disassembled-assembled-etc., absolute unit of a Delta 3D Printer, Frankendelta.
+Meet the 45lb, reassembled many times, absolute unit of a Delta 3D Printer: Frankendelta.
 ~Picture goes here~
-Over the summer of 2019, my dad and I worked together to design a 3D printer with a build volume large enough to print my head (that wasn't the main goal... but it's on the list). In all fairness, my dad brought in most of the expertise from building his Kossel Mini Delta 3D printer, scaling up the things he felt worked well from that. I had experience with cartesian printers, but deltas are a different beast. This repository serves as a medium for functionality and documentation, where I can refer back to the processes and files used to get Frankendelta humming and happy as needed.
+Over the summer of 2019, my dad and I worked together to design a 3D printer with a build volume large enough to print my head (that wasn't the main goal... but it's on the list). In all fairness, my dad brought in most of the expertise from building his Kossel Mini Delta 3D printer, scaling up the things he felt worked well from that. I had experience with cartesian printers, but deltas are a different beast. With the right settings, they can print extremely quickly without quality loss due to their light effectors. This repository serves as a medium for functionality and documentation, where I can refer back to the processes and files used to get Frankendelta humming and happy as needed.
 
 ## Parts List
 Here are most of the parts included in this build. Some not included are the aluminum sheets my dad milled on his CNC, T-nuts, control board standoffs, fans, and supplies (wires, JTX connectors, solder, cables, fuses, etc.). All in all, ended up costing ~$800.
