@@ -93,3 +93,5 @@ M92 ; The "E" parameter is the old e-step value
 8. Set the new e-steps with M92 E188.17
 8. Repeat steps 3-7 until the length_remaining is 20mm
 
+## Slicer Flow Rate
+Print out the 
