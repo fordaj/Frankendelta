@@ -104,4 +104,4 @@ I used a [retraction tower](retraction.gcode) from using Teaching Tech's [online
 I used an [acceleration test](acceleration.gcode) from using Teaching Tech's [online generator](https://teachingtechyt.github.io/calibration.html#accel).
 
 ## Linear Advance
-I used [linearAdvance](linearAdvance.gcode) from Marlin's linear advance [gcode generator](https://marlinfw.org/tools/lin_advance/k-factor.html).
+I used [linearAdvance](linearAdvance.gcode) from Marlin's linear advance [gcode generator](https://marlinfw.org/tools/lin_advance/k-factor.html). Note: For whatever reason, the code took *3 minutes* to get from home position to the bed.
