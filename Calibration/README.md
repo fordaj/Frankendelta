@@ -94,4 +94,7 @@ M92 ; The "E" parameter is the old e-step value
 8. Repeat steps 3-7 until the length_remaining is 20mm
 
 ## Slicer Flow Rate
-Print out the 
+1. Slice [cube.stl](cube.stl) in spiral vase mode with no infill, no top shells, and one perimeter with an extrusion width of 0.4mm
+2. Print out part and measure the sides. If the widths are not 0.4mm, increase or decrease the extrusion multiplier accordingly.
+
+## Retraction
