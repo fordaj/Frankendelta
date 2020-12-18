@@ -57,7 +57,7 @@ M501                        ; Load settings
 ```
 
 ## Bed Leveling
-To calibrate the saved mesh in UBL, run [UBL.gcode](UBL.gcode)
+To calibrate the saved mesh in UBL, run [UBL.gcode](UBL.gcode):
 ```gcode
 M502            ; Load firmware settings
 M500            ; Store settings in EEPROM
@@ -74,8 +74,8 @@ M500            ; Store settings in EEPROM
 ```
 Code modified from Marlin's [documentation](https://marlinfw.org/docs/features/unified_bed_leveling.html). Before every print, the mesh can be verified and tilted with a 3-point bed level:
 ```gcode
-G29 L1
-G29 J
+G29 L1  ; Load the mesh saved in slot 1
+G29 J   ; 3-point ABL, tilt mesh accordingly
 ```
 
 ## E-steps
@@ -98,3 +98,10 @@ M92 ; The "E" parameter is the old e-step value
 2. Print out part and measure the sides. If the widths are not 0.4mm, increase or decrease the extrusion multiplier accordingly.
 
 ## Retraction
+I used a [retraction tower](retraction.gcode) from using Teaching Tech's [online generator](https://teachingtechyt.github.io/calibration.html#retraction).
+
+## Acceleration and Jerk
+I used an [acceleration test](acceleration.gcode) from using Teaching Tech's [online generator](https://teachingtechyt.github.io/calibration.html#accel).
+
+## Linear Advance
+I used [linearAdvance](linearAdvance.gcode) from Marlin's linear advance [gcode generator](https://marlinfw.org/tools/lin_advance/k-factor.html).
