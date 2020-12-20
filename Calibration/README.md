@@ -70,7 +70,8 @@ G29 P3 T        ; Repeat until all mesh points are filled in
 G29 S1          ; Save UBL mesh points to EEPROM
 G29 F 10.0      ; Set Fade Height for correction at 10.0 mm
 G29 A           ; Activate the UBL
-M500            ; Store settings in EEPROM
+M500            ; Store settings
+M501            ; Load settings
 ```
 Code modified from Marlin's [documentation](https://marlinfw.org/docs/features/unified_bed_leveling.html). Before every print, the mesh can be verified and tilted with a 3-point bed level:
 ```gcode
@@ -88,9 +89,17 @@ M92 ; The "E" parameter is the old e-step value
 3. Mark the filament with a marker as close to the extruder as possible
 4. Make another mark on the incoming filament 120mm away from the first mark
 5. Turn the extruder knob to push filament through the hotend until your first mark lines up with the beginning of the extruder
-6. Run 100mm of filament through the hotend
-7. NewE_Steps = Old_ESteps * 100 / (120 - length_remaining) (Teaching Teach offers an [e-step calculator](https://teachingtechyt.github.io/calibration.html#esteps))
-8. Set the new e-steps with M92 E188.17
+6. Extrude 100mm of filament
+```gcode
+G1 E100 F50    ; Extrude 100mm of filament at 50mm/s
+```
+7. New_ESteps = Old_ESteps * 100 / (120 - length_remaining) (Teaching Teach offers an [e-step calculator](https://teachingtechyt.github.io/calibration.html#esteps))
+8. Write New_ESteps to the printer
+```gcode
+M92 E188 ; Write e-steps to printer
+M500     ; Store settings
+M501     ; Load settings
+```
 8. Repeat steps 3-7 until the length_remaining is 20mm
 
 ## Slicer Flow Rate
