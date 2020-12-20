@@ -101,10 +101,7 @@ M500     ; Store settings
 M501     ; Load settings
 ```
 8. Repeat steps 3-7 until the length_remaining is 20mm
-
-## Slicer Flow Rate
-1. Slice [cube.stl](cube.stl) in spiral vase mode with no infill, no top shells, and one perimeter with an extrusion width of 0.4mm
-2. Print out part and measure the sides. If the widths are not 0.4mm, increase or decrease the extrusion multiplier accordingly.
+At this point, many tutorials have you adjust your slicer's flow rate multiplier. I don't like to do this, because if the e-steps are tuned and the hotend is assembled correctly, then this should not be changed. To verify that you've properly calibrated your e-steps, print [cube.gcode](cube.gcode) and ensure that the edges are 0.40mm wide.
 
 ## Retraction
 I used a [retraction tower](retraction.gcode) from using Teaching Tech's [online generator](https://teachingtechyt.github.io/calibration.html#retraction).
