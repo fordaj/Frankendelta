@@ -1,6 +1,6 @@
 .pio/*
 !.pio/build
-pippo/build/*
+.pio/build/*
 !.pio/build/LPC1768
 .pio/build/LPC1768/*
 !.pio/build/LPC1768/firmware.bin
