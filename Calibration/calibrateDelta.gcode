@@ -1,4 +1,3 @@
-G33     ; Calibrate Towers
-M500    ; Store Settings
-G29     ; Level Bed
-M500    ; Store Settings
+G33     ; Calibrate towers
+M500    ; Store settings
+M501    ; Load settings
