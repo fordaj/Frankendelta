@@ -1,3 +1,9 @@
+.pio/*
+!.pio/build
+pippo/build/*
+!.pio/build/LPC1768
+.pio/build/LPC1768/*
+!.pio/build/LPC1768/firmware.bin
 .vscode/.browse.c_cpp.db*
 .vscode/c_cpp_properties.json
 .vscode/launch.json
