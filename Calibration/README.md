@@ -96,7 +96,7 @@ G1 E100 F50    ; Extrude 100mm of filament at 50mm/s
 7. New_ESteps = Old_ESteps * 100 / (120 - length_remaining) (Teaching Teach offers an [e-step calculator](https://teachingtechyt.github.io/calibration.html#esteps))
 8. Write New_ESteps to the printer
 ```gcode
-M92 E188 ; Write e-steps to printer
+M92 E192 ; Write e-steps to printer
 M500     ; Store settings
 M501     ; Load settings
 ```
