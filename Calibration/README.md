@@ -30,7 +30,7 @@ Any changes affecting the thermals of the printer should be followed with approp
 ### Hotend
 PID auto-tuning for the hotend can be run with M303 from host software (pronterface, octoprint, etc):
 ```gcode
-M303 E0 S260    ; Auto-tune PID values for hotend with 5 cycles 0C to 260C
+M303 E0 S220 C15    ; Auto-tune PID values for hotend with 15 cycles 0C to 220C
 ```
 After completion, be sure to copy the new values into Configuration.h. The values can be saved to the printer without rebuilding firmware:
 ```gcode
